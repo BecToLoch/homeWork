@@ -1,2 +1,2 @@
 console.log('Hellow World')
-const = bogdan
+const a = 'bogdan'
