@@ -1,43 +1,53 @@
-const name = "bogdan";
-console.log(typeof name);
+let a = 2;
+let b = 2;
+let c = 2;
 
-let age = 20;
-console.log(typeof age);
+console.log(a * b + c);
 
-const coolVideo = true;
-const badVideo = false;
+function degreesToRadians(degrees) {
+  return degrees * (Math.PI / 180);
+}
 
-console.log(typeof coolVideo);
-console.log(typeof badVideo);
+let sin = Math.sin(degreesToRadians(54));
+let cos = Math.cos(degreesToRadians(16));
 
-let price;
-console.log(typeof price);
+const result = Math.pow(sin * cos, 2);
+let rounded = Math.round(result * 100) / 100;
 
-let a = null
-console.log(typeof a)
+console.log(rounded);
 
-/*
-разница между хранением по значению  и по ссылке в том что применяется зачастую к разным типап данных
-так же в храние по значению создается отдельная копия данных а 
-в хранению по ссылке сохраняется не значение а ссылка
-хранение по значинею относиться к числам стокам и т.п.
-если же брать ссылочное храниение то оно относиться к объектам массивам и фенкциям 
-примеры ниже
-*/
+const numerator = 16 * Math.sqrt(13.1 * 71.90);
+const denominator = Math.pow(2.4, 1) / Math.pow(7, 4);
+const secondPart = 3 + Math.sqrt(49);
+const result2 = ((numerator / denominator) + secondPart) * Math.pow(2, 7);
+const roundedResult = Math.round(result2);
 
-let obj1 = {name: 'bogdan'}
-let obj2 = obj1
-
-obj1.name = 'саша'
-
-console.log(obj1.name)
-console.log(obj2.name)
+console.log(roundedResult);
 
 
-let c = 5
-let b = c
+let aa = 10 + 5;       
+let bb = a * 2;      
+let cc = b - 7;       
+let d = c / 3;        
 
-c = 10
+function isEven(num) {
+  if (num % 2 === 0) {
+    return `${num} — чётное число.`;
+  } else {
+    return `${num} — нечётное число.`;
+  }
+}
 
-console.log(c)
-console.log(b)
+console.log(isEven(aa)); // 15
+console.log(isEven(bb)); // 30
+console.log(isEven(cc)); // 23
+console.log(isEven(Math.floor(d))); 
+   
+
+let name 
+
+if (!name) {
+   console.log('Hello, Guest!');
+  } else {
+    console.log(`Hello, ${name}!`);
+  }
