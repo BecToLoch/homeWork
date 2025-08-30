@@ -1,53 +1,112 @@
-let a = 2;
-let b = 2;
-let c = 2;
+/*
+let number = prompt('введи число')
 
-console.log(a * b + c);
-
-function degreesToRadians(degrees) {
-  return degrees * (Math.PI / 180);
+if (number >= 0){
+   console.log ('положительное')
+} else if (number = 0){
+  console.log('это ноль')
+} else if (number <= 0) {
+  console.log ('отрицательное чило')
+}
+*/
+/*
+function calculetBMI(weigt , height){
+  return weigt / (height ** 2)
 }
 
-let sin = Math.sin(degreesToRadians(54));
-let cos = Math.cos(degreesToRadians(16));
-
-const result = Math.pow(sin * cos, 2);
-let rounded = Math.round(result * 100) / 100;
-
-console.log(rounded);
-
-const numerator = 16 * Math.sqrt(13.1 * 71.90);
-const denominator = Math.pow(2.4, 1) / Math.pow(7, 4);
-const secondPart = 3 + Math.sqrt(49);
-const result2 = ((numerator / denominator) + secondPart) * Math.pow(2, 7);
-const roundedResult = Math.round(result2);
-
-console.log(roundedResult);
-
-
-let aa = 10 + 5;       
-let bb = a * 2;      
-let cc = b - 7;       
-let d = c / 3;        
-
-function isEven(num) {
-  if (num % 2 === 0) {
-    return `${num} — чётное число.`;
+function getCategoryBMI(bmi){
+  if (BMI <= 16){
+    return ('Выраженный дефицит массы тела')   
+  } else if (BMI <= 18.5){
+    return ('Недостаточная масса тела')
+  } else if (BMI <= 25){
+    return ('Нормальный вес')
+  } else if (BMI <= 30){
+    return ('Избыточная масса тела (предожирение)')
+  } else if (BMI <= 35){
+    return ('Ожирение первой степени"')
+  } else if (BMI <= 40){
+    return ('Ожирение второй степени')
   } else {
-    return `${num} — нечётное число.`;
+    return ('Ожирение третьей степени')
   }
+} 
+
+const weigt = parseFloat(prompt('введите ваш вес в килограммах:'))
+const height = parseFloat(prompt('введите ваш рост в метрах'))
+
+const BMI = calculetBMI(weigt , height)
+const category = getCategoryBMI(BMI)
+
+console.log (`\n ваш индекс массы тела: ${BMI.toFixed(2)}`)
+console.log (`категория ${category}`)
+*/
+/*
+const month = parseFloat(prompt('введите номер месяца'))
+let monthName
+
+switch (month){
+  case 1:
+    monthName = 'Январь';
+  break;  
+  case 2:
+    monthName = 'Февраль';
+  break;  
+  case 3:  
+    monthName = 'Март';
+  break;  
+  case 4:
+    monthName = 'Апрель';
+  break;  
+  case 5:
+    monthName = 'Май';
+  break;  
+  case 6:
+    monthName = 'Июнь';
+  break;  
+  case 7:
+    monthName = 'Июль';
+  break;  
+  case 8:
+    monthName = 'Август';
+  break;  
+  case 9:
+    monthName = 'Сентябрь';
+  break;  
+  case 10:
+    monthName = 'Октябрь';
+  break;  
+  case 11:
+    monthName = 'Ноябрь';
+  break;  
+  case 12:
+    monthName = 'Декабрь';
+  break;  
 }
 
-console.log(isEven(aa)); // 15
-console.log(isEven(bb)); // 30
-console.log(isEven(cc)); // 23
-console.log(isEven(Math.floor(d))); 
-   
+console.log(monthName)
+*/
 
-let name 
 
-if (!name) {
-   console.log('Hello, Guest!');
-  } else {
-    console.log(`Hello, ${name}!`);
-  }
+const number = parseFloat(prompt('угадайте число от 1 до 5'))
+let answer
+
+switch (number){
+  case 1:
+    answer = 'рядом';
+  break;  
+  case 2:
+    answer = 'молодец возьми печеньку с полочки';
+  break;  
+  case 3:  
+    answer = 'увы и ах';
+  break;  
+  case 4:
+    answer = 'мимо мимо';
+  break;  
+  case 5:
+    answer = 'далеко ушел';
+  break;  
+} 
+
+console.log(answer)
