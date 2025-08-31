@@ -1,40 +1,58 @@
 /*
-const str = 'JavaScript is fun!'
-const result = str.includes('fun')
+const number = [1, 2, 3, 4, 5]
 
-console.log(result);
+const doubled = number.map((item) => {
+      return item * item
+})
+
+console.log(doubled);
 */
-/*
-let age = 0
 
-if (!age) {
-    console.log("Значение является falsy");
+/*
+const Number = [1, 2, 2, 3, 4, 5, 5, 5, 6]
+
+const allNumber = Number.filter((item, index, array) =>{
+      return array.indexOf(item) === index;
+})
+
+console.log(allNumber);
+*/
+
+/*
+const Number = [1, 2, 3, 4, 5, 6]
+ 
+const sum = Number.reduce((total, Number) => {
+  return total + Number
+})
+
+console.log(sum);
+*/
+
+/*
+function reverseArrayWithTemp(arr) {
+    const temp = [...arr];
+
+        for(let i = 0; i < arr.length; i++) {
+        const num = (arr.length - i) - 1;
+        arr[i] = temp[num];
+    }
+    return arr;
 }
+
+const array = [1, 2, 3, 4, 5];
+console.log(reverseArrayWithTemp(array));
 */
 
-/*
-let firsName = "bogdan";
-let lastName = " petrov";
-let occupation = "software developer";
+let stringLet = "Строка с let";
+const stringConst = "Строка с const";
+// если их переопределить то измениться let но не const ибо const нельзя изменить
 
-const masseg = `Hello, my name is ${firsName} ${lastName}. I am a ${occupation}.`;
+let arrayLet = [1, 2, 3];
+const arrayConst = [4, 5, 6];
 
-console.log(masseg);
-*/
+arrayLet.push(4);
+arrayConst.pop(6);
 
-
-//console.log(null === undefined);
-/* при строгом сравнении проверяется и значение, и тип данных. 
-null и undefined - это разные типы данных, поэтому результат false*/
-
-//console.log(null == undefined); // true
-/* при нестрогом сравнении JavaScript игнорирует типы данных
-и считает null и undefined равными по смыслу  */
-
-/*
-const number = 1
-const number2 = '1'
-
-console.log(number + number2);
-*/
-//так как тут складыватся число со строкой то никакой суммы не будет и js просто поставит их рядом
+console.log(arrayLet);
+console.log(arrayConst);
+//опять же если переопределять то получиться только с let const выдаст ошибку ибо он крутой и непоколебим
