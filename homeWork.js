@@ -17,14 +17,14 @@ console.log(`Сумма всех чисел от 0 до 100 ${sum}`)
 
 function isPrime(num) {
   if (num <= 1) return false;
-  for (i = 2; i <= Math.sqrt(num); i++) {
+  for (let i = 2; i <= Math.sqrt(num); i++) {
     if (num % i === 0) return false;
   }
   return true;
 }
 
 console.log("простые числа от 1 до 100");
-for (let i = 0; i <= 100; i++) {
+for (let i = 2; i <= 100; i++) {
   if (isPrime(i)) {
     console.log(i);
   }
