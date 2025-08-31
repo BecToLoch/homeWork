@@ -1,31 +1,40 @@
 /*
-for ( let i = 0; i <10 ; i++){
-  console.log(i)
+const str = 'JavaScript is fun!'
+const result = str.includes('fun')
+
+console.log(result);
+*/
+/*
+let age = 0
+
+if (!age) {
+    console.log("Значение является falsy");
 }
 */
-/* 
-let sum = 0
-let i = 1
 
-while(i <= 100){
-  sum += i
-  i++
-}
+/*
+let firsName = "bogdan";
+let lastName = " petrov";
+let occupation = "software developer";
 
-console.log(`Сумма всех чисел от 0 до 100 ${sum}`)
+const masseg = `Hello, my name is ${firsName} ${lastName}. I am a ${occupation}.`;
+
+console.log(masseg);
 */
 
-function isPrime(num) {
-  if (num <= 1) return false;
-  for (let i = 2; i <= Math.sqrt(num); i++) {
-    if (num % i === 0) return false;
-  }
-  return true;
-}
 
-console.log("простые числа от 1 до 100");
-for (let i = 2; i <= 100; i++) {
-  if (isPrime(i)) {
-    console.log(i);
-  }
-}
+//console.log(null === undefined);
+/* при строгом сравнении проверяется и значение, и тип данных. 
+null и undefined - это разные типы данных, поэтому результат false*/
+
+//console.log(null == undefined); // true
+/* при нестрогом сравнении JavaScript игнорирует типы данных
+и считает null и undefined равными по смыслу  */
+
+/*
+const number = 1
+const number2 = '1'
+
+console.log(number + number2);
+*/
+//так как тут складыватся число со строкой то никакой суммы не будет и js просто поставит их рядом
