@@ -1,58 +1,58 @@
 /*
 const number = [1, 2, 3, 4, 5]
 
-const doubled = number.map((item) => {
-      return item * item
-})
-
-console.log(doubled);
-*/
-
-/*
-const Number = [1, 2, 2, 3, 4, 5, 5, 5, 6]
-
-const allNumber = Number.filter((item, index, array) =>{
-      return array.indexOf(item) === index;
-})
-
-console.log(allNumber);
-*/
-
-/*
-const Number = [1, 2, 3, 4, 5, 6]
- 
-const sum = Number.reduce((total, Number) => {
-  return total + Number
-})
-
-console.log(sum);
-*/
-
-/*
-function reverseArrayWithTemp(arr) {
-    const temp = [...arr];
-
-        for(let i = 0; i < arr.length; i++) {
-        const num = (arr.length - i) - 1;
-        arr[i] = temp[num];
-    }
-    return arr;
+function midNumber(number){
+  const  sum = number.reduce((acc, num) => acc + num, 0)
+  return sum /number.length
 }
 
-const array = [1, 2, 3, 4, 5];
-console.log(reverseArrayWithTemp(array));
+console.log(midNumber(number));
 */
 
-let stringLet = "Строка с let";
-const stringConst = "Строка с const";
-// если их переопределить то измениться let но не const ибо const нельзя изменить
+/*
+const user = {
+  name: 'bogdan',
+  age: 20 ,
+  country: 'Russia'
+}
 
-let arrayLet = [1, 2, 3];
-const arrayConst = [4, 5, 6];
+const {name, age, country} = user 
 
-arrayLet.push(4);
-arrayConst.pop(6);
+console.log(name);
+console.log(age);
+console.log(country);
+*/
 
-console.log(arrayLet);
-console.log(arrayConst);
-//опять же если переопределять то получиться только с let const выдаст ошибку ибо он крутой и непоколебим
+/*
+const user = [ 'bogdan', [20], {city: 'Rostov'}]
+
+ const [name, [age], {city}] = user
+
+console.log(name);
+console.log(age);
+console.log(city);
+*/
+
+/*
+const originalMassiv = [1, 2, 3, 4, 5]
+
+const copiMassiv = [0, ...originalMassiv, 6]
+console.log(copiMassiv);
+*/
+
+/*
+function removeUser(obj, userRemove){
+  const { [userRemove]: remove, ...rest } = obj
+  return rest
+}
+
+const user = {
+  name: 'bogdan',
+  age: 20 ,
+  country: 'Russia'
+}
+
+const result = removeUser(user, 'age')
+console.log(result);
+*/
+
