@@ -1,80 +1,96 @@
-/*
-const isPalindrome = (str) =>{
-  const lowerStr = str.toLowerCase()
-  const revers = lowerStr.split('').reverse().join('')
-
-  return lowerStr === revers
+/*// 1 задание
+// Возьмите следующий код и приведите его в соответствие с общепринятым стандартом форматирования,
+// соблюдая отступы, выравнивание и правила расстановки пробелов:
+function multiply(a, b) {
+  return a * b;
 }
 
-console.log(isPalindrome('hellow'));
-*/
-
-/*
-const findShortestWord = (str) => {
-    const words = str.split(/\s+/);
-    let shorTest = words[0]
-    
-    for (let word of words)
-      if(word.length < shorTest.length){
-        shorTest = word
-    }
-      return shorTest
+const person = {
+  name: "Alice",
+  age: 30,
+};
+if (person.age > 18) {
+  console.log("Adult");
+} else {
+  console.log("Minor");
 }
 
-console.log(findShortestWord('всем привет здравья желаю'));
-*/
-
-/*
-const createPhoneNumber = (number) =>{
-  const str = number.toString()
-  
-  if (str.length !== 9){
-    throw new Error ('неправильный номер')
-  }
-
-  return (`8 (${str.slice(0, 3)}${str.slice(3,6)}-${str.slice(6)})`)
+// 2 задание
+// Представьте, что вы работаете в команде, и вам нужно сделать код понятным для всех участников.
+// Перепишите следующий код, используя понятные и логичные имена переменных и функций:
+function calculateProduct(firstNumber, secondNumber) {
+  const product = firstNumber * secondNumber;
+  return product;
 }
 
-console.log(createPhoneNumber('12345689'));
-*/
+const result = calculateProduct(5, 10);
 
-/*
-const masiv = [2, 3, 1, 5, 4]
-
- const src = (arr) => {
-   let min = arr[0]
-   let max = arr[0]
-  
-   for (let i = 1; i < arr.length; i++){
-    if (arr[i] < min){
-      min = arr[i] 
-    }
-    if (arr[i] > max){
-      max = arr[i] 
-    }
-   }
-   return {
-    min: min,
-    max: max
-   }
- }
-
-console.log(src(masiv));
-*/
-
-const masiv = [2, 33, 42, 52, 3];
-
-const sorting = (arr) => {
-  const n = arr.length
-
-  for(let i = 0; i < n-1; i++){
-    for(let j = 0; j < n - 1 - i; j++){
-      if (arr[j] > arr[j + 1]){
-         [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]
-      }
-    }
-  }
-  return arr
+// 3 задание
+// Убедитесь, что в коде используется единый стиль оформления. В следующем коде присутствуют смешанные стили кавычек,
+// разное использование var, let, и const, а также различное форматирование объектов и массивов. Исправьте код:
+const items = ["apple", "banana", "orange"];
+const price = {
+  apple: 1,
+  banana: 2,
+  orange: 3,
 };
 
-console.log(sorting(masiv));
+const total = price["apple"] + price["banana"] + price["orange"];
+
+function calculateTotal(items) {
+  return items.reduce(function (total, item) {
+    return total + item.price;
+  }, 0);
+}
+*/
+// 4 задание
+// Создайте функцию validateForm, которая принимает объект формы с полями name, email и password.
+// Она должна выполнять проверки для каждого поля. Если какое-то поле не заполнено или содержит неверные данные,
+// функция должна сразу возвращать ошибку, используя guard expressions. Если все данные верны,
+// функция должна возвращать сообщение "Форма успешно отправлена".
+
+const validateForm = (formData) => {
+  if (!formData || typeof formData !== "object") {
+    return "Ошибка: неверные входные данные";
+  }
+
+  if (
+    !formData.name || 
+    typeof formData.name !== "string" || 
+    formData.name.trim() === ""
+  ) {
+    return "Ошибка: имя должно быть заполнено";
+  }
+
+  if (
+    !formData.email ||
+    typeof formData.email !== "string" ||
+    formData.email.trim() === "" ||
+    !isValidEmail(formData.email)
+  ) {
+    return "Ошибка: некорректный email";
+  }
+
+  if (
+    !formData.password ||
+    typeof formData.password !== "string" ||
+    formData.password.trim() === "" ||
+    formData.password.length < 6
+  ) {
+    return "Ошибка: пароль должен быть не менее 6 символов";
+  }
+
+  return "Форма успешно отправлена";
+
+  function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+};
+
+console.log(validateForm({ 
+  name: 'John', 
+  email: 'test@example.com', 
+  password: '122334' 
+})); 
+
