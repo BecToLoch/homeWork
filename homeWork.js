@@ -1,55 +1,44 @@
 /*
-function hasEvenNumber(arr) {
-
-  let foundEven = false;
-
-  for (let i = 0; i < arr.length; i++) {
-
-    if (arr[i] % 2 === 0) {
-
-    foundEven = true;
-    break;
-   }
-  }
-  return foundEven;
+const person = {
+  name: 'Bogdan',
+  age: 20,
+  hobby: [
+    'music',
+    'game'
+  ]
 }
-console.log(hasEvenNumber([1, 3, 4, 5])); // Ожидается: true
+
+console.log(Object.keys(person));
+console.log(Object.values(person));
+console.log(person.hobby);
+console.log(Object.entries(person));
+
+
+for(let key in person) {
+    console.log(person[key]);
+    
+}
 */
 
-/*
-function calculateAverage(numbers) {
-
-  let sum = 0;
-
-  for (let i = 0; i < numbers.length; i++) { 
-    debugger;
-    sum += numbers[i];
-
-  }
-
-  return sum / numbers.length;
-
+const person = {
+  name: 'Bogdan',
+  age: 20,
+  hobby: [
+    'music',
+    'game'
+  ]
 }
 
-console.log(calculateAverage([2, 4, 6])); // Ожидается: 4
-*/
+person.city = 'Rostov'
+delete person.hobby
+person.age = 21 
 
-function findLargestNumber(arr) {
+console.log(person);
+console.log(Object.keys(person));
+console.log(Object.entries(person));
 
-  let largest = arr[0];
 
-  for (let i = 0; i < arr.length; i++) {
-
-    if (arr[i] > largest) {
-
-      largest = arr[i];
-
-    }
-
-  }
-
-  return largest;
-
+for(let key in person) {
+  console.log(person[key]);
+  
 }
-
-console.log(findLargestNumber([-10, -20, -30])); // Ожидается: -10
