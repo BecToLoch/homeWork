@@ -1,54 +1,65 @@
-
-const text = document.getElementById('text')
-const a = document.getElementById('a')
 /*
-text.textContent = ('что-то новое')
-console.log(text.textContent);
-*/
-
-/*
-text.classList.add('red')
-text.style.color = 'red'
-text.style.backgroundColor = 'black'
-*/
-
-/*
-const p = document.createElement ('p')
-
-p.textContent = 'что-то новое и не похожее на прошлое'
-
-document.body.appendChild(p)
-*/
-
-/*
-const delet = (id) => {
-  const pp = document.getElementById(id)
-
-  if(pp){
-    pp.remove()
-    console.log(`елемент с ID ${id} удален`);
-  } 
-}
-*/
-
-/*
-a.setAttribute('href', 'https://www.youtube.com/watch?v=zZBiln_2FhM&t=43s')
-console.log(a.getAttribute('href'));
-*/
-
-/*
-const p = document.createElement ('p')
-p.classList.add('text2')
-p.textContent = 'что-то еще раз новое и не похожее на прошлое'
-
-document.body.appendChild(p)
-*/
-
-const toggleClass = () =>{
-  const tt = document.getElementById('myElement')
+непойму поему но работает с задержкой mous
+const toggleButtonText = () => {
+  const button = document.getElementById('btn')
+  let originalText = 'смена текста'
+  let newText = 'текст изменен'
   
-  tt.classList.toggle('active')
-  const hasClass = tt.classList.contains('active')
+  button.addEventListener('click', () =>{
+    if(button.textContent === originalText){
+      button.textContent = newText  
+    }else{
+      button.textContent = originalText 
+    }
+  })
 
-  console.log(`класс 'active' присутствует: ${hasClass}`);
+  button.addEventListener('mouseover', () =>{
+    button.style.width = '200px'
+  })
+
+
+  button.addEventListener('mouseout', () => {    
+    button.style.width = ''
+  })
 }
+*/
+
+/*
+const input = document.getElementById('input')
+
+input.addEventListener('keyup', () =>{
+  const key = event.key
+  console.log(`нажата клавиша ${key}`);
+  
+})
+const form = document.getElementById('form')
+
+form.addEventListener('submit', (event) =>{
+    event.preventDefault()
+
+    const formData = new FormData(form)
+    const name = formData.get('name')
+
+    console.log('успешный вывод', {name});
+    
+})
+*/
+
+const style = document.getElementById('style')
+const text = document.getElementById('text')
+
+style.addEventListener('click', (event) =>{
+  event.preventDefault()
+  
+  const color = document.body.style.backgroundColor
+
+  if(color === 'black'){
+    document.body.style.backgroundColor = 'white'
+    text.style.color = 'black'
+  } else{
+    document.body.style.backgroundColor = 'black' 
+    text.style.color = 'white'
+  }
+
+
+})
