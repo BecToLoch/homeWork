@@ -1,6 +1,4 @@
 /*
-непойму поему но работает с задержкой mous
-const toggleButtonText = () => {
   const button = document.getElementById('btn')
   let originalText = 'смена текста'
   let newText = 'текст изменен'
@@ -21,13 +19,12 @@ const toggleButtonText = () => {
   button.addEventListener('mouseout', () => {    
     button.style.width = ''
   })
-}
 */
 
-/*
+
 const input = document.getElementById('input')
 
-input.addEventListener('keyup', () =>{
+input.addEventListener('keyup', (event) =>{
   const key = event.key
   console.log(`нажата клавиша ${key}`);
   
@@ -43,8 +40,9 @@ form.addEventListener('submit', (event) =>{
     console.log('успешный вывод', {name});
     
 })
-*/
 
+
+/*
 const style = document.getElementById('style')
 const text = document.getElementById('text')
 
@@ -63,3 +61,4 @@ style.addEventListener('click', (event) =>{
 
 
 })
+*/
